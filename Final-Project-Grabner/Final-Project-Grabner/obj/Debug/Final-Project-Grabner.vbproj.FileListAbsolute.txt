@@ -1,2 +1,7 @@
 C:\Users\aazzn_000\AppData\Local\Temporary Projects\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.exe.config
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.exe.config
+C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.vbprojResolveAssemblyReference.cache
+C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.MainForm.resources
+C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.Resources.resources
+C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.UpdateTask.resources
+C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.vbproj.GenerateResource.Cache
