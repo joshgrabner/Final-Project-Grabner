@@ -27,11 +27,19 @@ Partial Class UpdateTask
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.lblDescription = New System.Windows.Forms.Label()
         Me.cboUser = New System.Windows.Forms.ComboBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.dtpDue = New System.Windows.Forms.DateTimePicker()
         Me.dtpAssigned = New System.Windows.Forms.DateTimePicker()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.grpType = New System.Windows.Forms.GroupBox()
+        Me.radProject = New System.Windows.Forms.RadioButton()
+        Me.radChore = New System.Windows.Forms.RadioButton()
+        Me.radAppointment = New System.Windows.Forms.RadioButton()
+        Me.radHomework = New System.Windows.Forms.RadioButton()
+        Me.lblTitle = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.grpType.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblOwner
@@ -46,7 +54,7 @@ Partial Class UpdateTask
         'lblAssigned
         '
         Me.lblAssigned.AutoSize = True
-        Me.lblAssigned.Location = New System.Drawing.Point(31, 67)
+        Me.lblAssigned.Location = New System.Drawing.Point(31, 91)
         Me.lblAssigned.Name = "lblAssigned"
         Me.lblAssigned.Size = New System.Drawing.Size(76, 13)
         Me.lblAssigned.TabIndex = 1
@@ -55,7 +63,7 @@ Partial Class UpdateTask
         'lblDueDate
         '
         Me.lblDueDate.AutoSize = True
-        Me.lblDueDate.Location = New System.Drawing.Point(31, 104)
+        Me.lblDueDate.Location = New System.Drawing.Point(31, 128)
         Me.lblDueDate.Name = "lblDueDate"
         Me.lblDueDate.Size = New System.Drawing.Size(53, 13)
         Me.lblDueDate.TabIndex = 2
@@ -64,7 +72,7 @@ Partial Class UpdateTask
         'lblDescription
         '
         Me.lblDescription.AutoSize = True
-        Me.lblDescription.Location = New System.Drawing.Point(81, 149)
+        Me.lblDescription.Location = New System.Drawing.Point(84, 232)
         Me.lblDescription.Name = "lblDescription"
         Me.lblDescription.Size = New System.Drawing.Size(99, 13)
         Me.lblDescription.TabIndex = 3
@@ -78,19 +86,19 @@ Partial Class UpdateTask
         Me.cboUser.Size = New System.Drawing.Size(121, 21)
         Me.cboUser.TabIndex = 4
         '
-        'TextBox1
+        'txtDescription
         '
-        Me.TextBox1.Location = New System.Drawing.Point(34, 165)
-        Me.TextBox1.MaximumSize = New System.Drawing.Size(200, 150)
-        Me.TextBox1.MinimumSize = New System.Drawing.Size(200, 150)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 150)
-        Me.TextBox1.TabIndex = 5
+        Me.txtDescription.Location = New System.Drawing.Point(37, 248)
+        Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
+        Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
+        Me.txtDescription.Name = "txtDescription"
+        Me.txtDescription.Size = New System.Drawing.Size(200, 20)
+        Me.txtDescription.TabIndex = 5
         '
         'dtpDue
         '
         Me.dtpDue.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDue.Location = New System.Drawing.Point(131, 97)
+        Me.dtpDue.Location = New System.Drawing.Point(131, 121)
         Me.dtpDue.Name = "dtpDue"
         Me.dtpDue.Size = New System.Drawing.Size(103, 20)
         Me.dtpDue.TabIndex = 6
@@ -98,14 +106,14 @@ Partial Class UpdateTask
         'dtpAssigned
         '
         Me.dtpAssigned.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpAssigned.Location = New System.Drawing.Point(131, 60)
+        Me.dtpAssigned.Location = New System.Drawing.Point(131, 84)
         Me.dtpAssigned.Name = "dtpAssigned"
         Me.dtpAssigned.Size = New System.Drawing.Size(103, 20)
         Me.dtpAssigned.TabIndex = 7
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(34, 330)
+        Me.btnUpdate.Location = New System.Drawing.Point(37, 413)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
         Me.btnUpdate.TabIndex = 8
@@ -114,23 +122,99 @@ Partial Class UpdateTask
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(159, 330)
+        Me.btnCancel.Location = New System.Drawing.Point(162, 413)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 9
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'grpType
+        '
+        Me.grpType.Controls.Add(Me.radProject)
+        Me.grpType.Controls.Add(Me.radChore)
+        Me.grpType.Controls.Add(Me.radAppointment)
+        Me.grpType.Controls.Add(Me.radHomework)
+        Me.grpType.Location = New System.Drawing.Point(34, 154)
+        Me.grpType.Name = "grpType"
+        Me.grpType.Size = New System.Drawing.Size(203, 75)
+        Me.grpType.TabIndex = 10
+        Me.grpType.TabStop = False
+        Me.grpType.Text = "Type of Task"
+        '
+        'radProject
+        '
+        Me.radProject.AutoSize = True
+        Me.radProject.Location = New System.Drawing.Point(132, 44)
+        Me.radProject.Name = "radProject"
+        Me.radProject.Size = New System.Drawing.Size(58, 17)
+        Me.radProject.TabIndex = 3
+        Me.radProject.TabStop = True
+        Me.radProject.Text = "Project"
+        Me.radProject.UseVisualStyleBackColor = True
+        '
+        'radChore
+        '
+        Me.radChore.AutoSize = True
+        Me.radChore.Location = New System.Drawing.Point(132, 19)
+        Me.radChore.Name = "radChore"
+        Me.radChore.Size = New System.Drawing.Size(53, 17)
+        Me.radChore.TabIndex = 2
+        Me.radChore.TabStop = True
+        Me.radChore.Text = "Chore"
+        Me.radChore.UseVisualStyleBackColor = True
+        '
+        'radAppointment
+        '
+        Me.radAppointment.AutoSize = True
+        Me.radAppointment.Location = New System.Drawing.Point(7, 44)
+        Me.radAppointment.Name = "radAppointment"
+        Me.radAppointment.Size = New System.Drawing.Size(84, 17)
+        Me.radAppointment.TabIndex = 1
+        Me.radAppointment.TabStop = True
+        Me.radAppointment.Text = "Appointment"
+        Me.radAppointment.UseVisualStyleBackColor = True
+        '
+        'radHomework
+        '
+        Me.radHomework.AutoSize = True
+        Me.radHomework.Location = New System.Drawing.Point(7, 20)
+        Me.radHomework.Name = "radHomework"
+        Me.radHomework.Size = New System.Drawing.Size(76, 17)
+        Me.radHomework.TabIndex = 0
+        Me.radHomework.TabStop = True
+        Me.radHomework.Text = "Homework"
+        Me.radHomework.UseVisualStyleBackColor = True
+        '
+        'lblTitle
+        '
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Location = New System.Drawing.Point(31, 51)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(77, 13)
+        Me.lblTitle.TabIndex = 11
+        Me.lblTitle.Text = "Name for Task"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(114, 48)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(123, 20)
+        Me.TextBox2.TabIndex = 12
+        '
         'UpdateTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(264, 377)
+        Me.ClientSize = New System.Drawing.Size(278, 453)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.lblTitle)
+        Me.Controls.Add(Me.grpType)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.dtpAssigned)
         Me.Controls.Add(Me.dtpDue)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.cboUser)
         Me.Controls.Add(Me.lblDescription)
         Me.Controls.Add(Me.lblDueDate)
@@ -138,6 +222,8 @@ Partial Class UpdateTask
         Me.Controls.Add(Me.lblOwner)
         Me.Name = "UpdateTask"
         Me.Text = "UpdateTask"
+        Me.grpType.ResumeLayout(False)
+        Me.grpType.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,9 +234,16 @@ Partial Class UpdateTask
     Friend WithEvents lblDueDate As Label
     Friend WithEvents lblDescription As Label
     Friend WithEvents cboUser As ComboBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtDescription As TextBox
     Friend WithEvents dtpDue As DateTimePicker
     Friend WithEvents dtpAssigned As DateTimePicker
     Friend WithEvents btnUpdate As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents grpType As GroupBox
+    Friend WithEvents radProject As RadioButton
+    Friend WithEvents radChore As RadioButton
+    Friend WithEvents radAppointment As RadioButton
+    Friend WithEvents radHomework As RadioButton
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents TextBox2 As TextBox
 End Class

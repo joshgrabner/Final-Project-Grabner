@@ -64,6 +64,17 @@ Namespace My
                 Return CType(Me("TaskTable"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\FinalProjectD"& _ 
+            "atabase.mdf;Integrated Security=True;Connect Timeout=30")>  _
+        Public ReadOnly Property FinalProjectDatabase() As String
+            Get
+                Return CType(Me("FinalProjectDatabase"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

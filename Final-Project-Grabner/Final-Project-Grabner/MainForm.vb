@@ -12,4 +12,14 @@
         UpdateTask.ShowDialog()
 
     End Sub
+
+    Private Sub mnuTaskAdd_Click(sender As Object, e As EventArgs) Handles mnuTaskAdd.Click
+        AddTask.ShowDialog()
+
+    End Sub
+
+    Private Sub mnuTaskView_Click(sender As Object, e As EventArgs) Handles mnuTaskView.Click
+        ViewTask.ShowDialog()
+
+    End Sub
 End Class
