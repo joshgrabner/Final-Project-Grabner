@@ -102,35 +102,35 @@ Partial Class MainForm
         'mnuTaskAdd
         '
         Me.mnuTaskAdd.Name = "mnuTaskAdd"
-        Me.mnuTaskAdd.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskAdd.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskAdd.Text = "Add Task"
         '
         'mnuTaskView
         '
         Me.mnuTaskView.Name = "mnuTaskView"
-        Me.mnuTaskView.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskView.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskView.Text = "View Task"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(135, 6)
         '
         'mnuTaskUpdate
         '
         Me.mnuTaskUpdate.Name = "mnuTaskUpdate"
-        Me.mnuTaskUpdate.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskUpdate.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskUpdate.Text = "Update Task"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(135, 6)
         '
         'mnuTaskCalendar
         '
         Me.mnuTaskCalendar.Name = "mnuTaskCalendar"
-        Me.mnuTaskCalendar.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskCalendar.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskCalendar.Text = "Calendar"
         '
         'cboUsers

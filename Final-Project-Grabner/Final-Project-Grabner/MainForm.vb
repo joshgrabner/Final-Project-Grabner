@@ -1,11 +1,24 @@
 ﻿Option Strict On
 Option Explicit On
 
+Imports System.IO
 
 
 Public Class MainForm
+    Dim userList As List(Of String)
+
+
+
+
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MessageBox.Show("Welcome to the task tracker")
+
+        cboDayWindow.SelectedItem = "3"
+
+
+
+
+
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuFileExit.Click

@@ -6,4 +6,13 @@ Public Class AddTask
         Me.Close()
 
     End Sub
+
+
+
+    Private Sub txtEstimateTime_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEstimateTime.KeyPress
+        If Char.IsControl(e.KeyChar) Then Exit Sub
+        If Not Char.IsDigit(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
 End Class

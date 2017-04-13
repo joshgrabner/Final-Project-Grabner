@@ -12,7 +12,8 @@ C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Fina
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.exe
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.pdb
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.xml
-C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.Calendar.resources
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.exe
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.xml
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.pdb
+C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.vbprojResolveAssemblyReference.cache
+C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.TaskCalendar.resources

@@ -39,6 +39,8 @@ Partial Class AddTask
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblOwner = New System.Windows.Forms.Label()
+        Me.lblEstimate = New System.Windows.Forms.Label()
+        Me.txtEstimateTime = New System.Windows.Forms.TextBox()
         Me.grpType.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -117,7 +119,7 @@ Partial Class AddTask
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(170, 411)
+        Me.btnCancel.Location = New System.Drawing.Point(170, 476)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 22
@@ -126,7 +128,7 @@ Partial Class AddTask
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(45, 411)
+        Me.btnAdd.Location = New System.Drawing.Point(45, 476)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 21
@@ -155,7 +157,7 @@ Partial Class AddTask
         Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
         Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(200, 20)
+        Me.txtDescription.Size = New System.Drawing.Size(200, 150)
         Me.txtDescription.TabIndex = 18
         '
         'cboUser
@@ -163,7 +165,7 @@ Partial Class AddTask
         Me.cboUser.FormattingEnabled = True
         Me.cboUser.Location = New System.Drawing.Point(121, 10)
         Me.cboUser.Name = "cboUser"
-        Me.cboUser.Size = New System.Drawing.Size(121, 21)
+        Me.cboUser.Size = New System.Drawing.Size(124, 21)
         Me.cboUser.TabIndex = 17
         '
         'lblDescription
@@ -202,11 +204,29 @@ Partial Class AddTask
         Me.lblOwner.TabIndex = 13
         Me.lblOwner.Text = "Assigned To"
         '
+        'lblEstimate
+        '
+        Me.lblEstimate.AutoSize = True
+        Me.lblEstimate.Location = New System.Drawing.Point(27, 418)
+        Me.lblEstimate.Name = "lblEstimate"
+        Me.lblEstimate.Size = New System.Drawing.Size(235, 13)
+        Me.lblEstimate.TabIndex = 26
+        Me.lblEstimate.Text = "Estimated Time Required to Complete in Minutes"
+        '
+        'txtEstimateTime
+        '
+        Me.txtEstimateTime.Location = New System.Drawing.Point(49, 434)
+        Me.txtEstimateTime.Name = "txtEstimateTime"
+        Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
+        Me.txtEstimateTime.TabIndex = 27
+        '
         'AddTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 445)
+        Me.ClientSize = New System.Drawing.Size(283, 525)
+        Me.Controls.Add(Me.txtEstimateTime)
+        Me.Controls.Add(Me.lblEstimate)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.grpType)
@@ -246,4 +266,6 @@ Partial Class AddTask
     Friend WithEvents lblDueDate As Label
     Friend WithEvents lblAssigned As Label
     Friend WithEvents lblOwner As Label
+    Friend WithEvents lblEstimate As Label
+    Friend WithEvents txtEstimateTime As TextBox
 End Class
