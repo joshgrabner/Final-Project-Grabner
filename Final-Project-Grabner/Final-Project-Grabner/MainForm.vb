@@ -1,4 +1,9 @@
-﻿Public Class MainForm
+﻿Option Strict On
+Option Explicit On
+
+
+
+Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MessageBox.Show("Welcome to the task tracker")
     End Sub
@@ -21,5 +26,9 @@
     Private Sub mnuTaskView_Click(sender As Object, e As EventArgs) Handles mnuTaskView.Click
         ViewTask.ShowDialog()
 
+    End Sub
+
+    Private Sub mnuTaskCalendar_Click(sender As Object, e As EventArgs) Handles mnuTaskCalendar.Click
+        TaskCalendar.ShowDialog()
     End Sub
 End Class

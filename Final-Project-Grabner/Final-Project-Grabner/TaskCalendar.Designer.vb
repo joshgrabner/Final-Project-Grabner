@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Calendar
+Partial Class TaskCalendar
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -26,21 +26,22 @@ Partial Class Calendar
         Me.cboUser = New System.Windows.Forms.ComboBox()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.cal = New System.Windows.Forms.MonthCalendar()
         CType(Me.dgvCalendar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvCalendar
         '
         Me.dgvCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCalendar.Location = New System.Drawing.Point(12, 133)
+        Me.dgvCalendar.Location = New System.Drawing.Point(12, 192)
         Me.dgvCalendar.Name = "dgvCalendar"
-        Me.dgvCalendar.Size = New System.Drawing.Size(510, 344)
+        Me.dgvCalendar.Size = New System.Drawing.Size(491, 285)
         Me.dgvCalendar.TabIndex = 0
         '
         'cboUser
         '
         Me.cboUser.FormattingEnabled = True
-        Me.cboUser.Location = New System.Drawing.Point(186, 69)
+        Me.cboUser.Location = New System.Drawing.Point(37, 58)
         Me.cboUser.Name = "cboUser"
         Me.cboUser.Size = New System.Drawing.Size(121, 21)
         Me.cboUser.TabIndex = 1
@@ -48,7 +49,7 @@ Partial Class Calendar
         'lblUser
         '
         Me.lblUser.AutoSize = True
-        Me.lblUser.Location = New System.Drawing.Point(200, 29)
+        Me.lblUser.Location = New System.Drawing.Point(51, 18)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(71, 13)
         Me.lblUser.TabIndex = 2
@@ -63,11 +64,18 @@ Partial Class Calendar
         Me.btnClose.Text = "Close Calendar"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'cal
+        '
+        Me.cal.Location = New System.Drawing.Point(276, 18)
+        Me.cal.Name = "cal"
+        Me.cal.TabIndex = 4
+        '
         'Calendar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 555)
+        Me.Controls.Add(Me.cal)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.cboUser)
@@ -84,4 +92,5 @@ Partial Class Calendar
     Friend WithEvents cboUser As ComboBox
     Friend WithEvents lblUser As Label
     Friend WithEvents btnClose As Button
+    Friend WithEvents cal As MonthCalendar
 End Class

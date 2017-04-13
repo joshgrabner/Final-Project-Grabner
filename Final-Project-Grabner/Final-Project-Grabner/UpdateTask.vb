@@ -1,4 +1,7 @@
-﻿Public Class UpdateTask
+﻿Option Strict On
+Option Explicit On
+
+Public Class UpdateTask
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
 

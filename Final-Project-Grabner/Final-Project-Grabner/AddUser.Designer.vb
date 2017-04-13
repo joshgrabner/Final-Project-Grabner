@@ -23,7 +23,7 @@ Partial Class AddUser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAddUser = New System.Windows.Forms.Button()
         Me.btnReturn = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
@@ -37,14 +37,14 @@ Partial Class AddUser
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Enter Name for New User"
         '
-        'Button1
+        'btnAddUser
         '
-        Me.Button1.Location = New System.Drawing.Point(61, 127)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(139, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Add to User List"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnAddUser.Location = New System.Drawing.Point(61, 127)
+        Me.btnAddUser.Name = "btnAddUser"
+        Me.btnAddUser.Size = New System.Drawing.Size(139, 23)
+        Me.btnAddUser.TabIndex = 1
+        Me.btnAddUser.Text = "Add to User List"
+        Me.btnAddUser.UseVisualStyleBackColor = True
         '
         'btnReturn
         '
@@ -69,7 +69,7 @@ Partial Class AddUser
         Me.ClientSize = New System.Drawing.Size(265, 233)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnReturn)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnAddUser)
         Me.Controls.Add(Me.Label1)
         Me.Name = "AddUser"
         Me.Text = "Add a User"
@@ -79,7 +79,7 @@ Partial Class AddUser
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAddUser As Button
     Friend WithEvents btnReturn As Button
     Friend WithEvents TextBox1 As TextBox
 End Class
