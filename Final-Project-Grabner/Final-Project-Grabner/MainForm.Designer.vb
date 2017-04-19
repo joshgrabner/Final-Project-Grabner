@@ -22,143 +22,38 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuFileAddUser = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuFileAbout = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuFileExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuTask = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuTaskAdd = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuTaskView = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuTaskUpdate = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuTaskCalendar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.cboUsers = New System.Windows.Forms.ToolStripComboBox()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.dgvOutlook = New System.Windows.Forms.DataGridView()
-        Me.cboDayWindow = New System.Windows.Forms.ComboBox()
-        Me.lblWindow = New System.Windows.Forms.Label()
         Me.lblSelectExplainer = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.cboDayWindow = New System.Windows.Forms.ComboBox()
+        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.cboUsers = New System.Windows.Forms.ToolStripComboBox()
+        Me.mnuTaskCalendar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuTaskUpdate = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblWindow = New System.Windows.Forms.Label()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuTaskAdd = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuTask = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuTaskView = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileExit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuFileAbout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuFileAddUser = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.StatusStrip1.SuspendLayout()
-        CType(Me.dgvOutlook, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'MenuStrip1
+        'lblSelectExplainer
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuTask, Me.cboUsers})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(519, 27)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'mnuFile
-        '
-        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFileAddUser, Me.ToolStripSeparator1, Me.mnuFileAbout, Me.ToolStripSeparator4, Me.mnuFileExit})
-        Me.mnuFile.Name = "mnuFile"
-        Me.mnuFile.Size = New System.Drawing.Size(37, 23)
-        Me.mnuFile.Text = "File"
-        '
-        'mnuFileAddUser
-        '
-        Me.mnuFileAddUser.Name = "mnuFileAddUser"
-        Me.mnuFileAddUser.Size = New System.Drawing.Size(122, 22)
-        Me.mnuFileAddUser.Text = "Add User"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(119, 6)
-        '
-        'mnuFileAbout
-        '
-        Me.mnuFileAbout.Name = "mnuFileAbout"
-        Me.mnuFileAbout.Size = New System.Drawing.Size(122, 22)
-        Me.mnuFileAbout.Text = "About"
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(119, 6)
-        '
-        'mnuFileExit
-        '
-        Me.mnuFileExit.Name = "mnuFileExit"
-        Me.mnuFileExit.Size = New System.Drawing.Size(122, 22)
-        Me.mnuFileExit.Text = "Exit"
-        '
-        'mnuTask
-        '
-        Me.mnuTask.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuTaskAdd, Me.mnuTaskView, Me.ToolStripSeparator2, Me.mnuTaskUpdate, Me.ToolStripSeparator3, Me.mnuTaskCalendar})
-        Me.mnuTask.Name = "mnuTask"
-        Me.mnuTask.Size = New System.Drawing.Size(47, 23)
-        Me.mnuTask.Text = "Tasks"
-        '
-        'mnuTaskAdd
-        '
-        Me.mnuTaskAdd.Name = "mnuTaskAdd"
-        Me.mnuTaskAdd.Size = New System.Drawing.Size(138, 22)
-        Me.mnuTaskAdd.Text = "Add Task"
-        '
-        'mnuTaskView
-        '
-        Me.mnuTaskView.Name = "mnuTaskView"
-        Me.mnuTaskView.Size = New System.Drawing.Size(138, 22)
-        Me.mnuTaskView.Text = "View Task"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(135, 6)
-        '
-        'mnuTaskUpdate
-        '
-        Me.mnuTaskUpdate.Name = "mnuTaskUpdate"
-        Me.mnuTaskUpdate.Size = New System.Drawing.Size(138, 22)
-        Me.mnuTaskUpdate.Text = "Update Task"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(135, 6)
-        '
-        'mnuTaskCalendar
-        '
-        Me.mnuTaskCalendar.Name = "mnuTaskCalendar"
-        Me.mnuTaskCalendar.Size = New System.Drawing.Size(138, 22)
-        Me.mnuTaskCalendar.Text = "Calendar"
-        '
-        'cboUsers
-        '
-        Me.cboUsers.Name = "cboUsers"
-        Me.cboUsers.Size = New System.Drawing.Size(121, 23)
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 381)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(519, 22)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'lblStatus
-        '
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
-        '
-        'dgvOutlook
-        '
-        Me.dgvOutlook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvOutlook.Location = New System.Drawing.Point(0, 119)
-        Me.dgvOutlook.Name = "dgvOutlook"
-        Me.dgvOutlook.Size = New System.Drawing.Size(519, 259)
-        Me.dgvOutlook.TabIndex = 2
+        Me.lblSelectExplainer.AutoSize = True
+        Me.lblSelectExplainer.Location = New System.Drawing.Point(315, 54)
+        Me.lblSelectExplainer.Name = "lblSelectExplainer"
+        Me.lblSelectExplainer.Size = New System.Drawing.Size(204, 13)
+        Me.lblSelectExplainer.TabIndex = 12
+        Me.lblSelectExplainer.Text = "Choose the number of days to look ahead"
         '
         'cboDayWindow
         '
@@ -167,7 +62,43 @@ Partial Class MainForm
         Me.cboDayWindow.Location = New System.Drawing.Point(365, 81)
         Me.cboDayWindow.Name = "cboDayWindow"
         Me.cboDayWindow.Size = New System.Drawing.Size(121, 21)
-        Me.cboDayWindow.TabIndex = 4
+        Me.cboDayWindow.TabIndex = 10
+        '
+        'lblStatus
+        '
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 383)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(520, 22)
+        Me.StatusStrip1.TabIndex = 8
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'cboUsers
+        '
+        Me.cboUsers.Name = "cboUsers"
+        Me.cboUsers.Size = New System.Drawing.Size(121, 23)
+        '
+        'mnuTaskCalendar
+        '
+        Me.mnuTaskCalendar.Name = "mnuTaskCalendar"
+        Me.mnuTaskCalendar.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskCalendar.Text = "Calendar"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(149, 6)
+        '
+        'mnuTaskUpdate
+        '
+        Me.mnuTaskUpdate.Name = "mnuTaskUpdate"
+        Me.mnuTaskUpdate.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskUpdate.Text = "Update Task"
         '
         'lblWindow
         '
@@ -176,61 +107,116 @@ Partial Class MainForm
         Me.lblWindow.Location = New System.Drawing.Point(143, 82)
         Me.lblWindow.Name = "lblWindow"
         Me.lblWindow.Size = New System.Drawing.Size(158, 20)
-        Me.lblWindow.TabIndex = 5
+        Me.lblWindow.TabIndex = 11
         Me.lblWindow.Text = "Three Day Outlook"
         '
-        'lblSelectExplainer
+        'ToolStripSeparator2
         '
-        Me.lblSelectExplainer.AutoSize = True
-        Me.lblSelectExplainer.Location = New System.Drawing.Point(315, 54)
-        Me.lblSelectExplainer.Name = "lblSelectExplainer"
-        Me.lblSelectExplainer.Size = New System.Drawing.Size(204, 13)
-        Me.lblSelectExplainer.TabIndex = 6
-        Me.lblSelectExplainer.Text = "Choose the number of days to look ahead"
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        '
+        'mnuTaskAdd
+        '
+        Me.mnuTaskAdd.Name = "mnuTaskAdd"
+        Me.mnuTaskAdd.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskAdd.Text = "Add Task"
+        '
+        'mnuTask
+        '
+        Me.mnuTask.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuTaskAdd, Me.mnuTaskView, Me.ToolStripSeparator2, Me.mnuTaskUpdate, Me.ToolStripSeparator3, Me.mnuTaskCalendar})
+        Me.mnuTask.Name = "mnuTask"
+        Me.mnuTask.Size = New System.Drawing.Size(47, 23)
+        Me.mnuTask.Text = "Tasks"
+        '
+        'mnuTaskView
+        '
+        Me.mnuTaskView.Name = "mnuTaskView"
+        Me.mnuTaskView.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskView.Text = "View Task"
+        '
+        'mnuFileExit
+        '
+        Me.mnuFileExit.Name = "mnuFileExit"
+        Me.mnuFileExit.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileExit.Text = "Exit"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
+        '
+        'mnuFileAbout
+        '
+        Me.mnuFileAbout.Name = "mnuFileAbout"
+        Me.mnuFileAbout.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileAbout.Text = "About"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        '
+        'mnuFileAddUser
+        '
+        Me.mnuFileAddUser.Name = "mnuFileAddUser"
+        Me.mnuFileAddUser.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileAddUser.Text = "Add User"
+        '
+        'mnuFile
+        '
+        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFileAddUser, Me.ToolStripSeparator1, Me.mnuFileAbout, Me.ToolStripSeparator4, Me.mnuFileExit})
+        Me.mnuFile.Name = "mnuFile"
+        Me.mnuFile.Size = New System.Drawing.Size(37, 23)
+        Me.mnuFile.Text = "File"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuTask, Me.cboUsers})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(520, 27)
+        Me.MenuStrip1.TabIndex = 7
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(519, 403)
+        Me.ClientSize = New System.Drawing.Size(520, 405)
         Me.Controls.Add(Me.lblSelectExplainer)
-        Me.Controls.Add(Me.lblWindow)
         Me.Controls.Add(Me.cboDayWindow)
-        Me.Controls.Add(Me.dgvOutlook)
         Me.Controls.Add(Me.StatusStrip1)
+        Me.Controls.Add(Me.lblWindow)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainForm"
-        Me.Text = " Task Tracker"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.Text = "MainForm"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.dgvOutlook, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents lblStatus As ToolStripStatusLabel
-    Friend WithEvents mnuFile As ToolStripMenuItem
-    Friend WithEvents mnuFileExit As ToolStripMenuItem
-    Friend WithEvents mnuTask As ToolStripMenuItem
-    Friend WithEvents cboUsers As ToolStripComboBox
-    Friend WithEvents mnuFileAddUser As ToolStripMenuItem
-    Friend WithEvents mnuTaskAdd As ToolStripMenuItem
-    Friend WithEvents mnuTaskView As ToolStripMenuItem
-    Friend WithEvents dgvOutlook As DataGridView
-    Friend WithEvents cboDayWindow As ComboBox
-    Friend WithEvents lblWindow As Label
     Friend WithEvents lblSelectExplainer As Label
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents mnuTaskUpdate As ToolStripMenuItem
-    Friend WithEvents mnuFileAbout As ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents cboDayWindow As ComboBox
+    Friend WithEvents lblStatus As ToolStripStatusLabel
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents cboUsers As ToolStripComboBox
     Friend WithEvents mnuTaskCalendar As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
+    Friend WithEvents mnuTaskUpdate As ToolStripMenuItem
+    Friend WithEvents lblWindow As Label
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents mnuTaskAdd As ToolStripMenuItem
+    Friend WithEvents mnuTask As ToolStripMenuItem
+    Friend WithEvents mnuTaskView As ToolStripMenuItem
+    Friend WithEvents mnuFileExit As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents mnuFileAbout As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents mnuFileAddUser As ToolStripMenuItem
+    Friend WithEvents mnuFile As ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As MenuStrip
 End Class

@@ -1,16 +1,12 @@
-﻿Option Strict On
-Option Explicit On
-
-Imports System.IO
-
-
-Public Class MainForm
+﻿Public Class MainForm
     Dim userList As List(Of String)
 
 
 
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'FinalProjectDatabaseDataSet.InProgress' table. You can move, or remove it, as needed.
+        'Me.InProgressTableAdapter.Fill(Me.FinalProjectDatabaseDataSet.InProgress)
         MessageBox.Show("Welcome to the task tracker")
 
         cboDayWindow.SelectedItem = "3"
@@ -42,6 +38,6 @@ Public Class MainForm
     End Sub
 
     Private Sub mnuTaskCalendar_Click(sender As Object, e As EventArgs) Handles mnuTaskCalendar.Click
-        TaskCalendar.ShowDialog()
+        'TaskCalendar.ShowDialog()
     End Sub
 End Class
