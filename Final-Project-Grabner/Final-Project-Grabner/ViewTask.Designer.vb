@@ -22,6 +22,7 @@ Partial Class ViewTask
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.grpType = New System.Windows.Forms.GroupBox()
@@ -40,7 +41,12 @@ Partial Class ViewTask
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblOwner = New System.Windows.Forms.Label()
         Me.lstTasks = New System.Windows.Forms.ListBox()
+        Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
+        Me.TasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tasks_T__TableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
         Me.grpType.SuspendLayout()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox2
@@ -205,11 +211,26 @@ Partial Class ViewTask
         '
         'lstTasks
         '
+        Me.lstTasks.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TasksTBindingSource, "TaskID", True))
         Me.lstTasks.FormattingEnabled = True
         Me.lstTasks.Location = New System.Drawing.Point(328, 21)
         Me.lstTasks.Name = "lstTasks"
         Me.lstTasks.Size = New System.Drawing.Size(333, 407)
         Me.lstTasks.TabIndex = 39
+        '
+        'TaskProjectDataSet
+        '
+        Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
+        Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TasksTBindingSource
+        '
+        Me.TasksTBindingSource.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource.DataSource = Me.TaskProjectDataSet
+        '
+        'Tasks_T__TableAdapter
+        '
+        Me.Tasks_T__TableAdapter.ClearBeforeFill = True
         '
         'ViewTask
         '
@@ -234,6 +255,8 @@ Partial Class ViewTask
         Me.Text = "ViewTask"
         Me.grpType.ResumeLayout(False)
         Me.grpType.PerformLayout()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -257,4 +280,7 @@ Partial Class ViewTask
     Friend WithEvents lblAssigned As Label
     Friend WithEvents lblOwner As Label
     Friend WithEvents lstTasks As ListBox
+    Friend WithEvents TaskProjectDataSet As TaskProjectDataSet
+    Friend WithEvents TasksTBindingSource As BindingSource
+    Friend WithEvents Tasks_T__TableAdapter As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
 End Class

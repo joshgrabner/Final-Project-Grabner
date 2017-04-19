@@ -5,11 +5,16 @@
 
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TaskProjectDataSet._Tasks_T__' table. You can move, or remove it, as needed.
+        ' Me.Tasks_T__TableAdapter.Fill(Me.TaskProjectDataSet._Tasks_T__)
+        'TODO: This line of code loads data into the 'TaskProjectDataSet._Tasks_T__' table. You can move, or remove it, as needed.
+        'Me.Tasks_T__TableAdapter.Fill(Me.TaskProjectDataSet._Tasks_T__)
         'TODO: This line of code loads data into the 'FinalProjectDatabaseDataSet.InProgress' table. You can move, or remove it, as needed.
         'Me.InProgressTableAdapter.Fill(Me.FinalProjectDatabaseDataSet.InProgress)
         MessageBox.Show("Welcome to the task tracker")
 
-        cboDayWindow.SelectedItem = "3"
+        ' dgvTaskLook.DataSource =
+
 
 
 
@@ -39,5 +44,9 @@
 
     Private Sub mnuTaskCalendar_Click(sender As Object, e As EventArgs) Handles mnuTaskCalendar.Click
         'TaskCalendar.ShowDialog()
+    End Sub
+
+    Private Sub cboDayWindow_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboDayWindow.SelectedIndexChanged
+
     End Sub
 End Class

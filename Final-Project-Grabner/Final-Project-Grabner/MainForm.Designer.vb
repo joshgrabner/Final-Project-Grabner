@@ -22,11 +22,11 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblSelectExplainer = New System.Windows.Forms.Label()
         Me.cboDayWindow = New System.Windows.Forms.ComboBox()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.cboUsers = New System.Windows.Forms.ToolStripComboBox()
         Me.mnuTaskCalendar = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuTaskUpdate = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,8 +42,21 @@ Partial Class MainForm
         Me.mnuFileAddUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.dgvTaskLook = New System.Windows.Forms.DataGridView()
+        Me.TaskProjectDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
+        Me.TasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Tasks_T__TableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
+        Me.TasksTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TasksTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.dgvTaskLook, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskProjectDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblSelectExplainer
@@ -78,26 +91,21 @@ Partial Class MainForm
         Me.StatusStrip1.TabIndex = 8
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'cboUsers
-        '
-        Me.cboUsers.Name = "cboUsers"
-        Me.cboUsers.Size = New System.Drawing.Size(121, 23)
-        '
         'mnuTaskCalendar
         '
         Me.mnuTaskCalendar.Name = "mnuTaskCalendar"
-        Me.mnuTaskCalendar.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskCalendar.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskCalendar.Text = "Calendar"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(135, 6)
         '
         'mnuTaskUpdate
         '
         Me.mnuTaskUpdate.Name = "mnuTaskUpdate"
-        Me.mnuTaskUpdate.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskUpdate.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskUpdate.Text = "Update Task"
         '
         'lblWindow
@@ -113,12 +121,12 @@ Partial Class MainForm
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(135, 6)
         '
         'mnuTaskAdd
         '
         Me.mnuTaskAdd.Name = "mnuTaskAdd"
-        Me.mnuTaskAdd.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskAdd.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskAdd.Text = "Add Task"
         '
         'mnuTask
@@ -131,35 +139,35 @@ Partial Class MainForm
         'mnuTaskView
         '
         Me.mnuTaskView.Name = "mnuTaskView"
-        Me.mnuTaskView.Size = New System.Drawing.Size(152, 22)
+        Me.mnuTaskView.Size = New System.Drawing.Size(138, 22)
         Me.mnuTaskView.Text = "View Task"
         '
         'mnuFileExit
         '
         Me.mnuFileExit.Name = "mnuFileExit"
-        Me.mnuFileExit.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileExit.Size = New System.Drawing.Size(122, 22)
         Me.mnuFileExit.Text = "Exit"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(119, 6)
         '
         'mnuFileAbout
         '
         Me.mnuFileAbout.Name = "mnuFileAbout"
-        Me.mnuFileAbout.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileAbout.Size = New System.Drawing.Size(122, 22)
         Me.mnuFileAbout.Text = "About"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(119, 6)
         '
         'mnuFileAddUser
         '
         Me.mnuFileAddUser.Name = "mnuFileAddUser"
-        Me.mnuFileAddUser.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileAddUser.Size = New System.Drawing.Size(122, 22)
         Me.mnuFileAddUser.Text = "Add User"
         '
         'mnuFile
@@ -171,18 +179,59 @@ Partial Class MainForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuTask, Me.cboUsers})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuTask})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(520, 27)
+        Me.MenuStrip1.Size = New System.Drawing.Size(520, 24)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'dgvTaskLook
+        '
+        Me.dgvTaskLook.AllowUserToAddRows = False
+        Me.dgvTaskLook.AllowUserToDeleteRows = False
+        Me.dgvTaskLook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTaskLook.Location = New System.Drawing.Point(0, 153)
+        Me.dgvTaskLook.Name = "dgvTaskLook"
+        Me.dgvTaskLook.ReadOnly = True
+        Me.dgvTaskLook.Size = New System.Drawing.Size(508, 240)
+        Me.dgvTaskLook.TabIndex = 13
+        '
+        'TaskProjectDataSetBindingSource
+        '
+        Me.TaskProjectDataSetBindingSource.DataSource = Me.TaskProjectDataSet
+        Me.TaskProjectDataSetBindingSource.Position = 0
+        '
+        'TaskProjectDataSet
+        '
+        Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
+        Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TasksTBindingSource
+        '
+        Me.TasksTBindingSource.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource.DataSource = Me.TaskProjectDataSetBindingSource
+        '
+        'Tasks_T__TableAdapter
+        '
+        Me.Tasks_T__TableAdapter.ClearBeforeFill = True
+        '
+        'TasksTBindingSource1
+        '
+        Me.TasksTBindingSource1.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource1.DataSource = Me.TaskProjectDataSetBindingSource
+        '
+        'TasksTBindingSource2
+        '
+        Me.TasksTBindingSource2.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource2.DataSource = Me.TaskProjectDataSetBindingSource
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(520, 405)
+        Me.Controls.Add(Me.dgvTaskLook)
         Me.Controls.Add(Me.lblSelectExplainer)
         Me.Controls.Add(Me.cboDayWindow)
         Me.Controls.Add(Me.StatusStrip1)
@@ -194,6 +243,12 @@ Partial Class MainForm
         Me.StatusStrip1.PerformLayout()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.dgvTaskLook, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskProjectDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -203,7 +258,6 @@ Partial Class MainForm
     Friend WithEvents cboDayWindow As ComboBox
     Friend WithEvents lblStatus As ToolStripStatusLabel
     Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents cboUsers As ToolStripComboBox
     Friend WithEvents mnuTaskCalendar As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents mnuTaskUpdate As ToolStripMenuItem
@@ -219,4 +273,11 @@ Partial Class MainForm
     Friend WithEvents mnuFileAddUser As ToolStripMenuItem
     Friend WithEvents mnuFile As ToolStripMenuItem
     Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents dgvTaskLook As DataGridView
+    Friend WithEvents TaskProjectDataSetBindingSource As BindingSource
+    Friend WithEvents TaskProjectDataSet As TaskProjectDataSet
+    Friend WithEvents TasksTBindingSource As BindingSource
+    Friend WithEvents Tasks_T__TableAdapter As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
+    Friend WithEvents TasksTBindingSource1 As BindingSource
+    Friend WithEvents TasksTBindingSource2 As BindingSource
 End Class

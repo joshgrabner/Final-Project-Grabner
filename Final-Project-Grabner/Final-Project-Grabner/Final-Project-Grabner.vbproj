@@ -125,6 +125,11 @@
     </Compile>
     <Compile Include="Project.vb" />
     <Compile Include="Task.vb" />
+    <Compile Include="TaskProjectDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaskProjectDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateTask.Designer.vb">
       <DependentUpon>UpdateTask.vb</DependentUpon>
     </Compile>
@@ -172,6 +177,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="TaskProjectDataSet.xsc">
+      <DependentUpon>TaskProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TaskProjectDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaskProjectDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TaskProjectDataSet.xss">
+      <DependentUpon>TaskProjectDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -187,6 +203,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FinalProjectDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FinalProjectDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FinalProjectDatabase.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
