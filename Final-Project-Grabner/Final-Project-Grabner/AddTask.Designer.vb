@@ -22,6 +22,7 @@ Partial Class AddTask
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.grpType = New System.Windows.Forms.GroupBox()
@@ -41,7 +42,12 @@ Partial Class AddTask
         Me.lblOwner = New System.Windows.Forms.Label()
         Me.lblEstimate = New System.Windows.Forms.Label()
         Me.txtEstimateTime = New System.Windows.Forms.TextBox()
+        Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
+        Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.User_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.User_TTableAdapter()
         Me.grpType.SuspendLayout()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox2
@@ -157,16 +163,20 @@ Partial Class AddTask
         Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
         Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(200, 150)
+        Me.txtDescription.Size = New System.Drawing.Size(200, 20)
         Me.txtDescription.TabIndex = 18
         '
         'cboUser
         '
+        Me.cboUser.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TaskProjectDataSet, "User_T.UserID", True))
+        Me.cboUser.DataSource = Me.UserTBindingSource
+        Me.cboUser.DisplayMember = "Name"
         Me.cboUser.FormattingEnabled = True
         Me.cboUser.Location = New System.Drawing.Point(121, 10)
         Me.cboUser.Name = "cboUser"
         Me.cboUser.Size = New System.Drawing.Size(124, 21)
         Me.cboUser.TabIndex = 17
+        Me.cboUser.ValueMember = "UserID"
         '
         'lblDescription
         '
@@ -220,6 +230,20 @@ Partial Class AddTask
         Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
         Me.txtEstimateTime.TabIndex = 27
         '
+        'TaskProjectDataSet
+        '
+        Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
+        Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UserTBindingSource
+        '
+        Me.UserTBindingSource.DataMember = "User_T"
+        Me.UserTBindingSource.DataSource = Me.TaskProjectDataSet
+        '
+        'User_TTableAdapter
+        '
+        Me.User_TTableAdapter.ClearBeforeFill = True
+        '
         'AddTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -244,6 +268,8 @@ Partial Class AddTask
         Me.Text = "AddTask"
         Me.grpType.ResumeLayout(False)
         Me.grpType.PerformLayout()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -268,4 +294,7 @@ Partial Class AddTask
     Friend WithEvents lblOwner As Label
     Friend WithEvents lblEstimate As Label
     Friend WithEvents txtEstimateTime As TextBox
+    Friend WithEvents TaskProjectDataSet As TaskProjectDataSet
+    Friend WithEvents UserTBindingSource As BindingSource
+    Friend WithEvents User_TTableAdapter As TaskProjectDataSetTableAdapters.User_TTableAdapter
 End Class

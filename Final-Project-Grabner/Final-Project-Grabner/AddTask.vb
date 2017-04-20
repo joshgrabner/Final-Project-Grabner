@@ -15,4 +15,10 @@ Public Class AddTask
             e.Handled = True
         End If
     End Sub
+
+    Private Sub AddTask_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TaskProjectDataSet.User_T' table. You can move, or remove it, as needed.
+        Me.User_TTableAdapter.Fill(Me.TaskProjectDataSet.User_T)
+
+    End Sub
 End Class
