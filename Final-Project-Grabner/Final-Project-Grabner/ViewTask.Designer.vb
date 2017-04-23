@@ -44,13 +44,17 @@ Partial Class ViewTask
         Me.TasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
         Me.Tasks_T__TableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
+        Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.User_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.User_TTableAdapter()
         Me.grpType.SuspendLayout()
         CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox2
         '
+        Me.TextBox2.Enabled = False
         Me.TextBox2.Location = New System.Drawing.Point(122, 49)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(123, 20)
@@ -71,6 +75,7 @@ Partial Class ViewTask
         Me.grpType.Controls.Add(Me.radChore)
         Me.grpType.Controls.Add(Me.radAppointment)
         Me.grpType.Controls.Add(Me.radHomework)
+        Me.grpType.Enabled = False
         Me.grpType.Location = New System.Drawing.Point(42, 155)
         Me.grpType.Name = "grpType"
         Me.grpType.Size = New System.Drawing.Size(203, 75)
@@ -142,6 +147,7 @@ Partial Class ViewTask
         '
         'dtpAssigned
         '
+        Me.dtpAssigned.Enabled = False
         Me.dtpAssigned.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpAssigned.Location = New System.Drawing.Point(139, 85)
         Me.dtpAssigned.Name = "dtpAssigned"
@@ -150,6 +156,7 @@ Partial Class ViewTask
         '
         'dtpDue
         '
+        Me.dtpDue.Enabled = False
         Me.dtpDue.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpDue.Location = New System.Drawing.Point(139, 122)
         Me.dtpDue.Name = "dtpDue"
@@ -158,6 +165,7 @@ Partial Class ViewTask
         '
         'txtDescription
         '
+        Me.txtDescription.Enabled = False
         Me.txtDescription.Location = New System.Drawing.Point(45, 249)
         Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
         Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
@@ -167,11 +175,14 @@ Partial Class ViewTask
         '
         'cboUser
         '
+        Me.cboUser.DataSource = Me.UserTBindingSource
+        Me.cboUser.DisplayMember = "Name"
         Me.cboUser.FormattingEnabled = True
         Me.cboUser.Location = New System.Drawing.Point(121, 13)
         Me.cboUser.Name = "cboUser"
         Me.cboUser.Size = New System.Drawing.Size(121, 21)
         Me.cboUser.TabIndex = 30
+        Me.cboUser.ValueMember = "UserID"
         '
         'lblDescription
         '
@@ -235,6 +246,15 @@ Partial Class ViewTask
         '
         Me.Tasks_T__TableAdapter.ClearBeforeFill = True
         '
+        'UserTBindingSource
+        '
+        Me.UserTBindingSource.DataMember = "User_T"
+        Me.UserTBindingSource.DataSource = Me.TaskProjectDataSet
+        '
+        'User_TTableAdapter
+        '
+        Me.User_TTableAdapter.ClearBeforeFill = True
+        '
         'ViewTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -260,6 +280,7 @@ Partial Class ViewTask
         Me.grpType.PerformLayout()
         CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -286,4 +307,6 @@ Partial Class ViewTask
     Friend WithEvents TaskProjectDataSet As TaskProjectDataSet
     Friend WithEvents TasksTBindingSource As BindingSource
     Friend WithEvents Tasks_T__TableAdapter As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
+    Friend WithEvents UserTBindingSource As BindingSource
+    Friend WithEvents User_TTableAdapter As TaskProjectDataSetTableAdapters.User_TTableAdapter
 End Class

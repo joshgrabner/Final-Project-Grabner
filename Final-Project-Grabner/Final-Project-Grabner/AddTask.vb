@@ -2,6 +2,10 @@
 Option Explicit On
 
 Public Class AddTask
+
+
+
+
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
 
@@ -19,6 +23,13 @@ Public Class AddTask
     Private Sub AddTask_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TaskProjectDataSet.User_T' table. You can move, or remove it, as needed.
         Me.User_TTableAdapter.Fill(Me.TaskProjectDataSet.User_T)
+
+
+
+
+    End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
     End Sub
 End Class

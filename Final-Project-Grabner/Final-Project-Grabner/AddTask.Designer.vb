@@ -36,14 +36,14 @@ Partial Class AddTask
         Me.dtpDue = New System.Windows.Forms.DateTimePicker()
         Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.cboUser = New System.Windows.Forms.ComboBox()
+        Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
+        Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblDescription = New System.Windows.Forms.Label()
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblOwner = New System.Windows.Forms.Label()
         Me.lblEstimate = New System.Windows.Forms.Label()
         Me.txtEstimateTime = New System.Windows.Forms.TextBox()
-        Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
-        Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.User_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.User_TTableAdapter()
         Me.grpType.SuspendLayout()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,6 +115,7 @@ Partial Class AddTask
         'radHomework
         '
         Me.radHomework.AutoSize = True
+        Me.radHomework.Checked = True
         Me.radHomework.Location = New System.Drawing.Point(7, 20)
         Me.radHomework.Name = "radHomework"
         Me.radHomework.Size = New System.Drawing.Size(76, 17)
@@ -178,6 +179,16 @@ Partial Class AddTask
         Me.cboUser.TabIndex = 17
         Me.cboUser.ValueMember = "UserID"
         '
+        'TaskProjectDataSet
+        '
+        Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
+        Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'UserTBindingSource
+        '
+        Me.UserTBindingSource.DataMember = "User_T"
+        Me.UserTBindingSource.DataSource = Me.TaskProjectDataSet
+        '
         'lblDescription
         '
         Me.lblDescription.AutoSize = True
@@ -229,16 +240,6 @@ Partial Class AddTask
         Me.txtEstimateTime.Name = "txtEstimateTime"
         Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
         Me.txtEstimateTime.TabIndex = 27
-        '
-        'TaskProjectDataSet
-        '
-        Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
-        Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'UserTBindingSource
-        '
-        Me.UserTBindingSource.DataMember = "User_T"
-        Me.UserTBindingSource.DataSource = Me.TaskProjectDataSet
         '
         'User_TTableAdapter
         '
