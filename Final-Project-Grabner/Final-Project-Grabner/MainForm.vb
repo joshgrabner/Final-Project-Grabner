@@ -7,15 +7,10 @@
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TaskProjectDataSet.Types_T' table. You can move, or remove it, as needed.
         Me.Types_TTableAdapter.Fill(Me.TaskProjectDataSet.Types_T)
-        'TODO: This line of code loads data into the 'TaskProjectDataSet._Tasks_T__' table. You can move, or remove it, as needed.
-        ' Me.Tasks_T__TableAdapter.Fill(Me.TaskProjectDataSet._Tasks_T__)
-        'TODO: This line of code loads data into the 'TaskProjectDataSet._Tasks_T__' table. You can move, or remove it, as needed.
-        'Me.Tasks_T__TableAdapter.Fill(Me.TaskProjectDataSet._Tasks_T__)
-        'TODO: This line of code loads data into the 'FinalProjectDatabaseDataSet.InProgress' table. You can move, or remove it, as needed.
-        'Me.InProgressTableAdapter.Fill(Me.FinalProjectDatabaseDataSet.InProgress)
+
         MessageBox.Show("Welcome to the task tracker")
 
-        dgvTaskLook.DataSource = TaskProjectDataSet
+
 
 
 
@@ -54,7 +49,7 @@
 
     End Sub
 
-    Private Sub MainPageFillToolStripButton_Click(sender As Object, e As EventArgs) Handles MainPageFillToolStripButton.Click
+    Private Sub MainPageFillToolStripButton_Click(sender As Object, e As EventArgs)
         Try
             Me.Tasks_T__TableAdapter.MainPageFill(Me.TaskProjectDataSet._Tasks_T__)
         Catch ex As System.Exception

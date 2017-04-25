@@ -36,20 +36,23 @@ Partial Class ViewTask
         Me.dtpDue = New System.Windows.Forms.DateTimePicker()
         Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.cboUser = New System.Windows.Forms.ComboBox()
+        Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
         Me.lblDescription = New System.Windows.Forms.Label()
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblOwner = New System.Windows.Forms.Label()
         Me.lstTasks = New System.Windows.Forms.ListBox()
         Me.TasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
+        Me.FKUSersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tasks_T__TableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
-        Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.User_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.User_TTableAdapter()
+        Me.btnComplete = New System.Windows.Forms.Button()
         Me.grpType.SuspendLayout()
-        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKUSersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox2
@@ -175,6 +178,7 @@ Partial Class ViewTask
         '
         'cboUser
         '
+        Me.cboUser.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.UserTBindingSource, "UserID", True))
         Me.cboUser.DataSource = Me.UserTBindingSource
         Me.cboUser.DisplayMember = "Name"
         Me.cboUser.FormattingEnabled = True
@@ -183,6 +187,16 @@ Partial Class ViewTask
         Me.cboUser.Size = New System.Drawing.Size(121, 21)
         Me.cboUser.TabIndex = 30
         Me.cboUser.ValueMember = "UserID"
+        '
+        'UserTBindingSource
+        '
+        Me.UserTBindingSource.DataMember = "User_T"
+        Me.UserTBindingSource.DataSource = Me.TaskProjectDataSet
+        '
+        'TaskProjectDataSet
+        '
+        Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
+        Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lblDescription
         '
@@ -222,44 +236,49 @@ Partial Class ViewTask
         '
         'lstTasks
         '
-        Me.lstTasks.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TasksTBindingSource, "TaskID", True))
-        Me.lstTasks.DataSource = Me.TasksTBindingSource
-        Me.lstTasks.DisplayMember = "TaskID"
+        Me.lstTasks.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TasksTBindingSource, "Title", True))
+        Me.lstTasks.DataSource = Me.FKUSersBindingSource
+        Me.lstTasks.DisplayMember = "Title"
         Me.lstTasks.FormattingEnabled = True
         Me.lstTasks.Location = New System.Drawing.Point(328, 21)
         Me.lstTasks.Name = "lstTasks"
         Me.lstTasks.Size = New System.Drawing.Size(333, 407)
         Me.lstTasks.TabIndex = 39
-        Me.lstTasks.ValueMember = "Title"
+        Me.lstTasks.ValueMember = "TaskID"
         '
         'TasksTBindingSource
         '
         Me.TasksTBindingSource.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.TasksTBindingSource.DataSource = Me.TaskProjectDataSet
         '
-        'TaskProjectDataSet
+        'FKUSersBindingSource
         '
-        Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
-        Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.FKUSersBindingSource.DataMember = "FK_USers"
+        Me.FKUSersBindingSource.DataSource = Me.UserTBindingSource
         '
         'Tasks_T__TableAdapter
         '
         Me.Tasks_T__TableAdapter.ClearBeforeFill = True
         '
-        'UserTBindingSource
-        '
-        Me.UserTBindingSource.DataMember = "User_T"
-        Me.UserTBindingSource.DataSource = Me.TaskProjectDataSet
-        '
         'User_TTableAdapter
         '
         Me.User_TTableAdapter.ClearBeforeFill = True
+        '
+        'btnComplete
+        '
+        Me.btnComplete.Location = New System.Drawing.Point(49, 366)
+        Me.btnComplete.Name = "btnComplete"
+        Me.btnComplete.Size = New System.Drawing.Size(183, 23)
+        Me.btnComplete.TabIndex = 40
+        Me.btnComplete.Text = "Mark Complete"
+        Me.btnComplete.UseVisualStyleBackColor = True
         '
         'ViewTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(673, 450)
+        Me.Controls.Add(Me.btnComplete)
         Me.Controls.Add(Me.lstTasks)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.lblTitle)
@@ -278,9 +297,10 @@ Partial Class ViewTask
         Me.Text = "ViewTask"
         Me.grpType.ResumeLayout(False)
         Me.grpType.PerformLayout()
-        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKUSersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -309,4 +329,6 @@ Partial Class ViewTask
     Friend WithEvents Tasks_T__TableAdapter As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
     Friend WithEvents UserTBindingSource As BindingSource
     Friend WithEvents User_TTableAdapter As TaskProjectDataSetTableAdapters.User_TTableAdapter
+    Friend WithEvents FKUSersBindingSource As BindingSource
+    Friend WithEvents btnComplete As Button
 End Class

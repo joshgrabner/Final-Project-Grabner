@@ -2,6 +2,9 @@
 Option Explicit On
 
 Public Class AddTask
+    Private mTaskType As Short
+    Private mUserID As Short
+
 
 
 
@@ -13,7 +16,7 @@ Public Class AddTask
 
 
 
-    Private Sub txtEstimateTime_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEstimateTime.KeyPress
+    Private Sub txtEstimateTime_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Char.IsControl(e.KeyChar) Then Exit Sub
         If Not Char.IsDigit(e.KeyChar) Then
             e.Handled = True
@@ -27,9 +30,40 @@ Public Class AddTask
 
 
 
+
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Tasks_T__TableAdapter1.Insert(False, mUserID, dtpDue.Value.Date, dtpAssigned.Value.Date, mTaskType, txtDescription.Text, txtTitle.Text)
+    End Sub
 
+    Private Sub cboUser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboUser.SelectedIndexChanged
+        mUserID = CShort(cboUser.SelectedValue)
+    End Sub
+
+    Private Sub radHomework_CheckedChanged(sender As Object, e As EventArgs) Handles radHomework.CheckedChanged
+        If radHomework.Checked Then
+            mTaskType = 1
+
+        End If
+    End Sub
+
+    Private Sub radChore_CheckedChanged(sender As Object, e As EventArgs) Handles radChore.CheckedChanged
+        If radChore.Checked Then
+            mTaskType = 3
+
+        End If
+    End Sub
+
+    Private Sub radAppointment_CheckedChanged(sender As Object, e As EventArgs) Handles radAppointment.CheckedChanged
+        If radAppointment.Checked Then
+            mTaskType = 2
+        End If
+    End Sub
+
+    Private Sub radProject_CheckedChanged(sender As Object, e As EventArgs) Handles radProject.CheckedChanged
+        If radProject.Checked Then
+            mTaskType = 4
+        End If
     End Sub
 End Class

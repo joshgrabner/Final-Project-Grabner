@@ -208,19 +208,12 @@
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FinalProj.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="FinalProjectDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="FinalProjectDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>FinalProjectDatabase.mdf</DependentUpon>
-    </Content>
-    <Content Include="FinalProj_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>FinalProj.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

@@ -23,7 +23,7 @@ Partial Class AddTask
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtTitle = New System.Windows.Forms.TextBox()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.grpType = New System.Windows.Forms.GroupBox()
         Me.radProject = New System.Windows.Forms.RadioButton()
@@ -42,20 +42,19 @@ Partial Class AddTask
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblOwner = New System.Windows.Forms.Label()
-        Me.lblEstimate = New System.Windows.Forms.Label()
-        Me.txtEstimateTime = New System.Windows.Forms.TextBox()
         Me.User_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.User_TTableAdapter()
+        Me.Tasks_T__TableAdapter1 = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
         Me.grpType.SuspendLayout()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox2
+        'txtTitle
         '
-        Me.TextBox2.Location = New System.Drawing.Point(122, 46)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(123, 20)
-        Me.TextBox2.TabIndex = 25
+        Me.txtTitle.Location = New System.Drawing.Point(122, 46)
+        Me.txtTitle.Name = "txtTitle"
+        Me.txtTitle.Size = New System.Drawing.Size(123, 20)
+        Me.txtTitle.TabIndex = 25
         '
         'lblTitle
         '
@@ -126,7 +125,7 @@ Partial Class AddTask
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(170, 476)
+        Me.btnCancel.Location = New System.Drawing.Point(167, 398)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 22
@@ -135,7 +134,7 @@ Partial Class AddTask
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(45, 476)
+        Me.btnAdd.Location = New System.Drawing.Point(45, 402)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 21
@@ -164,7 +163,7 @@ Partial Class AddTask
         Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
         Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
         Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(200, 20)
+        Me.txtDescription.Size = New System.Drawing.Size(200, 150)
         Me.txtDescription.TabIndex = 18
         '
         'cboUser
@@ -225,34 +224,21 @@ Partial Class AddTask
         Me.lblOwner.TabIndex = 13
         Me.lblOwner.Text = "Assigned To"
         '
-        'lblEstimate
-        '
-        Me.lblEstimate.AutoSize = True
-        Me.lblEstimate.Location = New System.Drawing.Point(27, 418)
-        Me.lblEstimate.Name = "lblEstimate"
-        Me.lblEstimate.Size = New System.Drawing.Size(235, 13)
-        Me.lblEstimate.TabIndex = 26
-        Me.lblEstimate.Text = "Estimated Time Required to Complete in Minutes"
-        '
-        'txtEstimateTime
-        '
-        Me.txtEstimateTime.Location = New System.Drawing.Point(49, 434)
-        Me.txtEstimateTime.Name = "txtEstimateTime"
-        Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
-        Me.txtEstimateTime.TabIndex = 27
-        '
         'User_TTableAdapter
         '
         Me.User_TTableAdapter.ClearBeforeFill = True
+        '
+        'Tasks_T__TableAdapter1
+        '
+        Me.Tasks_T__TableAdapter1.ClearBeforeFill = True
         '
         'AddTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(283, 525)
-        Me.Controls.Add(Me.txtEstimateTime)
-        Me.Controls.Add(Me.lblEstimate)
-        Me.Controls.Add(Me.TextBox2)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(267, 433)
+        Me.Controls.Add(Me.txtTitle)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.grpType)
         Me.Controls.Add(Me.btnCancel)
@@ -276,7 +262,7 @@ Partial Class AddTask
 
     End Sub
 
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtTitle As TextBox
     Friend WithEvents lblTitle As Label
     Friend WithEvents grpType As GroupBox
     Friend WithEvents radProject As RadioButton
@@ -293,9 +279,8 @@ Partial Class AddTask
     Friend WithEvents lblDueDate As Label
     Friend WithEvents lblAssigned As Label
     Friend WithEvents lblOwner As Label
-    Friend WithEvents lblEstimate As Label
-    Friend WithEvents txtEstimateTime As TextBox
     Friend WithEvents TaskProjectDataSet As TaskProjectDataSet
     Friend WithEvents UserTBindingSource As BindingSource
     Friend WithEvents User_TTableAdapter As TaskProjectDataSetTableAdapters.User_TTableAdapter
+    Friend WithEvents Tasks_T__TableAdapter1 As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
 End Class

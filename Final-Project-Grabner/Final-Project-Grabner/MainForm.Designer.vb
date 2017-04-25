@@ -39,30 +39,31 @@ Partial Class MainForm
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuFileAddUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.dgvTaskLook = New System.Windows.Forms.DataGridView()
-        Me.TasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TasksTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TasksTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TaskProjectDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.mnuTitleStrip = New System.Windows.Forms.MenuStrip()
         Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
         Me.Tasks_T__TableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
+        Me.TaskProjectDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TypesTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TaskProjectDataSet1 = New Final_Project_Grabner.TaskProjectDataSet()
+        Me.dgvTaskLook = New System.Windows.Forms.DataGridView()
+        Me.TasksTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TypesTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Types_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Types_TTableAdapter()
-        Me.TypeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TaskTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MainPageFillToolStripButton = New System.Windows.Forms.ToolStripButton()
-        Me.MainPageFillToolStrip = New System.Windows.Forms.ToolStrip()
+        Me.TasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TasksTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.StatusStrip1.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
-        CType(Me.dgvTaskLook, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TaskProjectDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.mnuTitleStrip.SuspendLayout()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskProjectDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TypesTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TaskProjectDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTaskLook, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TypesTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MainPageFillToolStrip.SuspendLayout()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblStatus
@@ -75,7 +76,7 @@ Partial Class MainForm
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 413)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(539, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(647, 22)
         Me.StatusStrip1.TabIndex = 8
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -100,7 +101,7 @@ Partial Class MainForm
         '
         Me.lblWindow.AutoSize = True
         Me.lblWindow.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWindow.Location = New System.Drawing.Point(143, 82)
+        Me.lblWindow.Location = New System.Drawing.Point(235, 24)
         Me.lblWindow.Name = "lblWindow"
         Me.lblWindow.Size = New System.Drawing.Size(160, 20)
         Me.lblWindow.TabIndex = 11
@@ -165,48 +166,14 @@ Partial Class MainForm
         Me.mnuFile.Size = New System.Drawing.Size(37, 20)
         Me.mnuFile.Text = "File"
         '
-        'MenuStrip1
+        'mnuTitleStrip
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuTask})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(539, 24)
-        Me.MenuStrip1.TabIndex = 7
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'dgvTaskLook
-        '
-        Me.dgvTaskLook.AllowUserToAddRows = False
-        Me.dgvTaskLook.AllowUserToDeleteRows = False
-        Me.dgvTaskLook.AutoGenerateColumns = False
-        Me.dgvTaskLook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTaskLook.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TypeIDDataGridViewTextBoxColumn, Me.TaskTypeDataGridViewTextBoxColumn})
-        Me.dgvTaskLook.DataSource = Me.TypesTBindingSource
-        Me.dgvTaskLook.Location = New System.Drawing.Point(0, 153)
-        Me.dgvTaskLook.Name = "dgvTaskLook"
-        Me.dgvTaskLook.ReadOnly = True
-        Me.dgvTaskLook.Size = New System.Drawing.Size(508, 240)
-        Me.dgvTaskLook.TabIndex = 13
-        '
-        'TasksTBindingSource
-        '
-        Me.TasksTBindingSource.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.TasksTBindingSource.DataSource = Me.TaskProjectDataSetBindingSource
-        '
-        'TasksTBindingSource1
-        '
-        Me.TasksTBindingSource1.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.TasksTBindingSource1.DataSource = Me.TaskProjectDataSetBindingSource
-        '
-        'TasksTBindingSource2
-        '
-        Me.TasksTBindingSource2.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.TasksTBindingSource2.DataSource = Me.TaskProjectDataSetBindingSource
-        '
-        'TaskProjectDataSetBindingSource
-        '
-        Me.TaskProjectDataSetBindingSource.DataSource = Me.TaskProjectDataSet
-        Me.TaskProjectDataSetBindingSource.Position = 0
+        Me.mnuTitleStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuTask})
+        Me.mnuTitleStrip.Location = New System.Drawing.Point(0, 0)
+        Me.mnuTitleStrip.Name = "mnuTitleStrip"
+        Me.mnuTitleStrip.Size = New System.Drawing.Size(647, 24)
+        Me.mnuTitleStrip.TabIndex = 7
+        Me.mnuTitleStrip.Text = "MenuStrip1"
         '
         'TaskProjectDataSet
         '
@@ -217,70 +184,87 @@ Partial Class MainForm
         '
         Me.Tasks_T__TableAdapter.ClearBeforeFill = True
         '
+        'TaskProjectDataSetBindingSource1
+        '
+        Me.TaskProjectDataSetBindingSource1.DataSource = Me.TaskProjectDataSet
+        Me.TaskProjectDataSetBindingSource1.Position = 0
+        '
+        'TaskProjectDataSet1
+        '
+        Me.TaskProjectDataSet1.DataSetName = "TaskProjectDataSet"
+        Me.TaskProjectDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'dgvTaskLook
+        '
+        Me.dgvTaskLook.AllowUserToAddRows = False
+        Me.dgvTaskLook.AllowUserToDeleteRows = False
+        Me.dgvTaskLook.AutoGenerateColumns = False
+        Me.dgvTaskLook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTaskLook.DataSource = Me.TaskProjectDataSet1
+        Me.dgvTaskLook.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvTaskLook.Location = New System.Drawing.Point(0, 0)
+        Me.dgvTaskLook.Name = "dgvTaskLook"
+        Me.dgvTaskLook.ReadOnly = True
+        Me.dgvTaskLook.Size = New System.Drawing.Size(642, 361)
+        Me.dgvTaskLook.TabIndex = 12
+        '
+        'TasksTBindingSource1
+        '
+        Me.TasksTBindingSource1.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource1.DataSource = Me.TaskProjectDataSet
+        '
         'TypesTBindingSource
         '
         Me.TypesTBindingSource.DataMember = "Types_T"
-        Me.TypesTBindingSource.DataSource = Me.TaskProjectDataSetBindingSource
+        Me.TypesTBindingSource.DataSource = Me.TaskProjectDataSet
         '
         'Types_TTableAdapter
         '
         Me.Types_TTableAdapter.ClearBeforeFill = True
         '
-        'TypeIDDataGridViewTextBoxColumn
+        'TasksTBindingSource
         '
-        Me.TypeIDDataGridViewTextBoxColumn.DataPropertyName = "TypeID"
-        Me.TypeIDDataGridViewTextBoxColumn.HeaderText = "TypeID"
-        Me.TypeIDDataGridViewTextBoxColumn.Name = "TypeIDDataGridViewTextBoxColumn"
-        Me.TypeIDDataGridViewTextBoxColumn.ReadOnly = True
+        Me.TasksTBindingSource.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource.DataSource = Me.TaskProjectDataSet
         '
-        'TaskTypeDataGridViewTextBoxColumn
+        'Panel1
         '
-        Me.TaskTypeDataGridViewTextBoxColumn.DataPropertyName = "TaskType"
-        Me.TaskTypeDataGridViewTextBoxColumn.HeaderText = "TaskType"
-        Me.TaskTypeDataGridViewTextBoxColumn.Name = "TaskTypeDataGridViewTextBoxColumn"
-        Me.TaskTypeDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Panel1.Controls.Add(Me.dgvTaskLook)
+        Me.Panel1.Location = New System.Drawing.Point(4, 52)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(642, 361)
+        Me.Panel1.TabIndex = 13
         '
-        'MainPageFillToolStripButton
+        'TasksTBindingSource2
         '
-        Me.MainPageFillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.MainPageFillToolStripButton.Name = "MainPageFillToolStripButton"
-        Me.MainPageFillToolStripButton.Size = New System.Drawing.Size(79, 22)
-        Me.MainPageFillToolStripButton.Text = "MainPageFill"
-        '
-        'MainPageFillToolStrip
-        '
-        Me.MainPageFillToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MainPageFillToolStripButton})
-        Me.MainPageFillToolStrip.Location = New System.Drawing.Point(0, 24)
-        Me.MainPageFillToolStrip.Name = "MainPageFillToolStrip"
-        Me.MainPageFillToolStrip.Size = New System.Drawing.Size(539, 25)
-        Me.MainPageFillToolStrip.TabIndex = 14
-        Me.MainPageFillToolStrip.Text = "MainPageFillToolStrip"
+        Me.TasksTBindingSource2.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource2.DataSource = Me.TaskProjectDataSet
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(539, 435)
-        Me.Controls.Add(Me.MainPageFillToolStrip)
-        Me.Controls.Add(Me.dgvTaskLook)
+        Me.ClientSize = New System.Drawing.Size(647, 435)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.lblWindow)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.mnuTitleStrip)
         Me.Name = "MainForm"
         Me.Text = "MainForm"
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        CType(Me.dgvTaskLook, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TaskProjectDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.mnuTitleStrip.ResumeLayout(False)
+        Me.mnuTitleStrip.PerformLayout()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskProjectDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TypesTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TaskProjectDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTaskLook, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TypesTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MainPageFillToolStrip.ResumeLayout(False)
-        Me.MainPageFillToolStrip.PerformLayout()
+        CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -301,18 +285,17 @@ Partial Class MainForm
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents mnuFileAddUser As ToolStripMenuItem
     Friend WithEvents mnuFile As ToolStripMenuItem
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents dgvTaskLook As DataGridView
-    Friend WithEvents TaskProjectDataSetBindingSource As BindingSource
+    Friend WithEvents mnuTitleStrip As MenuStrip
     Friend WithEvents TaskProjectDataSet As TaskProjectDataSet
-    Friend WithEvents TasksTBindingSource As BindingSource
     Friend WithEvents Tasks_T__TableAdapter As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
-    Friend WithEvents TasksTBindingSource1 As BindingSource
-    Friend WithEvents TasksTBindingSource2 As BindingSource
+    Friend WithEvents TaskProjectDataSetBindingSource1 As BindingSource
+    Friend WithEvents TypesTBindingSource1 As BindingSource
+    Friend WithEvents TaskProjectDataSet1 As TaskProjectDataSet
+    Friend WithEvents dgvTaskLook As DataGridView
     Friend WithEvents TypesTBindingSource As BindingSource
     Friend WithEvents Types_TTableAdapter As TaskProjectDataSetTableAdapters.Types_TTableAdapter
-    Friend WithEvents TypeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TaskTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents MainPageFillToolStripButton As ToolStripButton
-    Friend WithEvents MainPageFillToolStrip As ToolStrip
+    Friend WithEvents TasksTBindingSource1 As BindingSource
+    Friend WithEvents TasksTBindingSource As BindingSource
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TasksTBindingSource2 As BindingSource
 End Class
