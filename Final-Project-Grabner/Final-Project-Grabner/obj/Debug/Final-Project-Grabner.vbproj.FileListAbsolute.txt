@@ -18,3 +18,21 @@ C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Fina
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.vbprojResolveAssemblyReference.cache
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\FinalProj.mdf
 C:\Users\aazzn_000\Google Drive\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\FinalProj_log.ldf
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.exe.config
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.exe
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.xml
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.pdb
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\FinalProjectDatabase.mdf
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\FinalProjectDatabase_log.ldf
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.exe
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.pdb
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\bin\Debug\Final-Project-Grabner.xml
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.vbprojResolveAssemblyReference.cache
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.AddTask.resources
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.AddUser.resources
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.MainForm.resources
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.Resources.resources
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.UpdateTask.resources
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.ViewTask.resources
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final-Project-Grabner.vbproj.GenerateResource.Cache
+C:\Users\aazzn_000\Desktop\Final-Project-Grabner\Final-Project-Grabner\Final-Project-Grabner\obj\Debug\Final_Project_Grabner.AboutUser.resources

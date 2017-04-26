@@ -134,29 +134,29 @@ Partial Class MainForm
         'mnuFileExit
         '
         Me.mnuFileExit.Name = "mnuFileExit"
-        Me.mnuFileExit.Size = New System.Drawing.Size(122, 22)
+        Me.mnuFileExit.Size = New System.Drawing.Size(152, 22)
         Me.mnuFileExit.Text = "Exit"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(119, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(149, 6)
         '
         'mnuFileAbout
         '
         Me.mnuFileAbout.Name = "mnuFileAbout"
-        Me.mnuFileAbout.Size = New System.Drawing.Size(122, 22)
-        Me.mnuFileAbout.Text = "About"
+        Me.mnuFileAbout.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileAbout.Text = "View User"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(119, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(149, 6)
         '
         'mnuFileAddUser
         '
         Me.mnuFileAddUser.Name = "mnuFileAddUser"
-        Me.mnuFileAddUser.Size = New System.Drawing.Size(122, 22)
+        Me.mnuFileAddUser.Size = New System.Drawing.Size(152, 22)
         Me.mnuFileAddUser.Text = "Add User"
         '
         'mnuFile

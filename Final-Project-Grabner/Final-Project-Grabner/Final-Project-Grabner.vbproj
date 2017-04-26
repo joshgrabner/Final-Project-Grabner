@@ -87,6 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUser.Designer.vb">
+      <DependentUpon>AboutUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddTask.Designer.vb">
       <DependentUpon>AddTask.vb</DependentUpon>
     </Compile>
@@ -99,15 +105,12 @@
     <Compile Include="AddUser.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Appointment.vb" />
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Chore.vb" />
-    <Compile Include="Homework.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -123,7 +126,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Project.vb" />
     <Compile Include="Task.vb" />
     <Compile Include="TaskProjectDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -147,6 +149,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutUser.resx">
+      <DependentUpon>AboutUser.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTask.resx">
       <DependentUpon>AddTask.vb</DependentUpon>
     </EmbeddedResource>

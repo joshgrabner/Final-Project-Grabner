@@ -34,31 +34,39 @@ Partial Class ViewTask
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.dtpAssigned = New System.Windows.Forms.DateTimePicker()
         Me.dtpDue = New System.Windows.Forms.DateTimePicker()
-        Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.cboUser = New System.Windows.Forms.ComboBox()
         Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
-        Me.lblDescription = New System.Windows.Forms.Label()
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblOwner = New System.Windows.Forms.Label()
         Me.lstTasks = New System.Windows.Forms.ListBox()
         Me.TasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TasksTBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.FKUSersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tasks_T__TableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
         Me.User_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.User_TTableAdapter()
         Me.btnComplete = New System.Windows.Forms.Button()
+        Me.txtEstimateTime = New System.Windows.Forms.TextBox()
+        Me.lblTimeToComplete = New System.Windows.Forms.Label()
+        Me.FKTasksTCompletedTasksTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CompletedTasks_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.CompletedTasks_TTableAdapter()
+        Me.TasksTBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.grpType.SuspendLayout()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FKUSersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FKTasksTCompletedTasksTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox2
         '
         Me.TextBox2.Enabled = False
         Me.TextBox2.Location = New System.Drawing.Point(122, 49)
+        Me.TextBox2.MaxLength = 20
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(123, 20)
         Me.TextBox2.TabIndex = 38
@@ -166,16 +174,6 @@ Partial Class ViewTask
         Me.dtpDue.Size = New System.Drawing.Size(103, 20)
         Me.dtpDue.TabIndex = 32
         '
-        'txtDescription
-        '
-        Me.txtDescription.Enabled = False
-        Me.txtDescription.Location = New System.Drawing.Point(45, 249)
-        Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
-        Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
-        Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(200, 20)
-        Me.txtDescription.TabIndex = 31
-        '
         'cboUser
         '
         Me.cboUser.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.UserTBindingSource, "UserID", True))
@@ -197,15 +195,6 @@ Partial Class ViewTask
         '
         Me.TaskProjectDataSet.DataSetName = "TaskProjectDataSet"
         Me.TaskProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'lblDescription
-        '
-        Me.lblDescription.AutoSize = True
-        Me.lblDescription.Location = New System.Drawing.Point(92, 233)
-        Me.lblDescription.Name = "lblDescription"
-        Me.lblDescription.Size = New System.Drawing.Size(99, 13)
-        Me.lblDescription.TabIndex = 29
-        Me.lblDescription.Text = "Description of Task"
         '
         'lblDueDate
         '
@@ -236,8 +225,7 @@ Partial Class ViewTask
         '
         'lstTasks
         '
-        Me.lstTasks.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TasksTBindingSource, "Title", True))
-        Me.lstTasks.DataSource = Me.FKUSersBindingSource
+        Me.lstTasks.DataSource = Me.TasksTBindingSource2
         Me.lstTasks.DisplayMember = "Title"
         Me.lstTasks.FormattingEnabled = True
         Me.lstTasks.Location = New System.Drawing.Point(328, 21)
@@ -250,6 +238,11 @@ Partial Class ViewTask
         '
         Me.TasksTBindingSource.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.TasksTBindingSource.DataSource = Me.TaskProjectDataSet
+        '
+        'TasksTBindingSource1
+        '
+        Me.TasksTBindingSource1.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource1.DataSource = Me.TaskProjectDataSet
         '
         'FKUSersBindingSource
         '
@@ -266,18 +259,51 @@ Partial Class ViewTask
         '
         'btnComplete
         '
-        Me.btnComplete.Location = New System.Drawing.Point(49, 366)
+        Me.btnComplete.Location = New System.Drawing.Point(49, 355)
         Me.btnComplete.Name = "btnComplete"
         Me.btnComplete.Size = New System.Drawing.Size(183, 23)
         Me.btnComplete.TabIndex = 40
         Me.btnComplete.Text = "Mark Complete"
         Me.btnComplete.UseVisualStyleBackColor = True
         '
+        'txtEstimateTime
+        '
+        Me.txtEstimateTime.Location = New System.Drawing.Point(49, 304)
+        Me.txtEstimateTime.MaxLength = 3
+        Me.txtEstimateTime.Name = "txtEstimateTime"
+        Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
+        Me.txtEstimateTime.TabIndex = 42
+        '
+        'lblTimeToComplete
+        '
+        Me.lblTimeToComplete.AutoSize = True
+        Me.lblTimeToComplete.Location = New System.Drawing.Point(39, 278)
+        Me.lblTimeToComplete.Name = "lblTimeToComplete"
+        Me.lblTimeToComplete.Size = New System.Drawing.Size(217, 13)
+        Me.lblTimeToComplete.TabIndex = 41
+        Me.lblTimeToComplete.Text = "Estimated minutes required to complete task "
+        '
+        'FKTasksTCompletedTasksTBindingSource
+        '
+        Me.FKTasksTCompletedTasksTBindingSource.DataMember = "FK_Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "_CompletedTasks_T"
+        Me.FKTasksTCompletedTasksTBindingSource.DataSource = Me.TasksTBindingSource
+        '
+        'CompletedTasks_TTableAdapter
+        '
+        Me.CompletedTasks_TTableAdapter.ClearBeforeFill = True
+        '
+        'TasksTBindingSource2
+        '
+        Me.TasksTBindingSource2.DataMember = "Tasks_T" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.TasksTBindingSource2.DataSource = Me.TaskProjectDataSet
+        '
         'ViewTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(673, 450)
+        Me.Controls.Add(Me.txtEstimateTime)
+        Me.Controls.Add(Me.lblTimeToComplete)
         Me.Controls.Add(Me.btnComplete)
         Me.Controls.Add(Me.lstTasks)
         Me.Controls.Add(Me.TextBox2)
@@ -287,20 +313,21 @@ Partial Class ViewTask
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.dtpAssigned)
         Me.Controls.Add(Me.dtpDue)
-        Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.cboUser)
-        Me.Controls.Add(Me.lblDescription)
         Me.Controls.Add(Me.lblDueDate)
         Me.Controls.Add(Me.lblAssigned)
         Me.Controls.Add(Me.lblOwner)
         Me.Name = "ViewTask"
-        Me.Text = "ViewTask"
+        Me.Text = "Review All Tasks"
         Me.grpType.ResumeLayout(False)
         Me.grpType.PerformLayout()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FKUSersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FKTasksTCompletedTasksTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TasksTBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -317,9 +344,7 @@ Partial Class ViewTask
     Friend WithEvents btnEdit As Button
     Friend WithEvents dtpAssigned As DateTimePicker
     Friend WithEvents dtpDue As DateTimePicker
-    Friend WithEvents txtDescription As TextBox
     Friend WithEvents cboUser As ComboBox
-    Friend WithEvents lblDescription As Label
     Friend WithEvents lblDueDate As Label
     Friend WithEvents lblAssigned As Label
     Friend WithEvents lblOwner As Label
@@ -331,4 +356,10 @@ Partial Class ViewTask
     Friend WithEvents User_TTableAdapter As TaskProjectDataSetTableAdapters.User_TTableAdapter
     Friend WithEvents FKUSersBindingSource As BindingSource
     Friend WithEvents btnComplete As Button
+    Friend WithEvents txtEstimateTime As TextBox
+    Friend WithEvents lblTimeToComplete As Label
+    Friend WithEvents FKTasksTCompletedTasksTBindingSource As BindingSource
+    Friend WithEvents CompletedTasks_TTableAdapter As TaskProjectDataSetTableAdapters.CompletedTasks_TTableAdapter
+    Friend WithEvents TasksTBindingSource1 As BindingSource
+    Friend WithEvents TasksTBindingSource2 As BindingSource
 End Class

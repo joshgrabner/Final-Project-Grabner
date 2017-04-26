@@ -4,6 +4,9 @@ Option Explicit On
 Public Class AddTask
     Private mTaskType As Short
     Private mUserID As Short
+    Private mTime As Short
+    Private mTask As New Task
+
 
 
 
@@ -24,8 +27,14 @@ Public Class AddTask
     End Sub
 
     Private Sub AddTask_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TaskProjectDataSet.User_T' table. You can move, or remove it, as needed.
+        'TODO: This line of code loads data into the 'TaskProjectDataSet.User_T' table. 
+        'You can move, Or remove it, as needed.
         Me.User_TTableAdapter.Fill(Me.TaskProjectDataSet.User_T)
+        txtTitle.Clear()
+        txtEstimateTime.Clear()
+        dtpAssigned.Value = DateTime.Today
+        dtpDue.Value = DateTime.Today
+
 
 
 
@@ -34,7 +43,8 @@ Public Class AddTask
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Tasks_T__TableAdapter1.Insert(False, mUserID, dtpDue.Value.Date, dtpAssigned.Value.Date, mTaskType, txtDescription.Text, txtTitle.Text)
+        mTime = CShort(txtEstimateTime.Text)
+        mTask.Insert(False, mUserID, dtpDue.Value.Date, dtpAssigned.Value.Date, mTaskType, txtTitle.Text, mTime)
     End Sub
 
     Private Sub cboUser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboUser.SelectedIndexChanged
@@ -66,4 +76,10 @@ Public Class AddTask
             mTaskType = 4
         End If
     End Sub
+
+
+
+
+
+
 End Class

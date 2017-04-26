@@ -25,9 +25,7 @@ Partial Class UpdateTask
         Me.lblOwner = New System.Windows.Forms.Label()
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblDueDate = New System.Windows.Forms.Label()
-        Me.lblDescription = New System.Windows.Forms.Label()
         Me.cboUser = New System.Windows.Forms.ComboBox()
-        Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.dtpDue = New System.Windows.Forms.DateTimePicker()
         Me.dtpAssigned = New System.Windows.Forms.DateTimePicker()
         Me.btnUpdate = New System.Windows.Forms.Button()
@@ -39,6 +37,8 @@ Partial Class UpdateTask
         Me.radHomework = New System.Windows.Forms.RadioButton()
         Me.lblTitle = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtEstimateTime = New System.Windows.Forms.TextBox()
+        Me.lblTimeToComplete = New System.Windows.Forms.Label()
         Me.grpType.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,15 +69,6 @@ Partial Class UpdateTask
         Me.lblDueDate.TabIndex = 2
         Me.lblDueDate.Text = "Due Date"
         '
-        'lblDescription
-        '
-        Me.lblDescription.AutoSize = True
-        Me.lblDescription.Location = New System.Drawing.Point(84, 232)
-        Me.lblDescription.Name = "lblDescription"
-        Me.lblDescription.Size = New System.Drawing.Size(99, 13)
-        Me.lblDescription.TabIndex = 3
-        Me.lblDescription.Text = "Description of Task"
-        '
         'cboUser
         '
         Me.cboUser.FormattingEnabled = True
@@ -85,15 +76,6 @@ Partial Class UpdateTask
         Me.cboUser.Name = "cboUser"
         Me.cboUser.Size = New System.Drawing.Size(121, 21)
         Me.cboUser.TabIndex = 4
-        '
-        'txtDescription
-        '
-        Me.txtDescription.Location = New System.Drawing.Point(37, 248)
-        Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
-        Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
-        Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(200, 20)
-        Me.txtDescription.TabIndex = 5
         '
         'dtpDue
         '
@@ -202,11 +184,30 @@ Partial Class UpdateTask
         Me.TextBox2.Size = New System.Drawing.Size(123, 20)
         Me.TextBox2.TabIndex = 12
         '
+        'txtEstimateTime
+        '
+        Me.txtEstimateTime.Location = New System.Drawing.Point(49, 285)
+        Me.txtEstimateTime.MaxLength = 3
+        Me.txtEstimateTime.Name = "txtEstimateTime"
+        Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
+        Me.txtEstimateTime.TabIndex = 29
+        '
+        'lblTimeToComplete
+        '
+        Me.lblTimeToComplete.AutoSize = True
+        Me.lblTimeToComplete.Location = New System.Drawing.Point(31, 260)
+        Me.lblTimeToComplete.Name = "lblTimeToComplete"
+        Me.lblTimeToComplete.Size = New System.Drawing.Size(217, 13)
+        Me.lblTimeToComplete.TabIndex = 28
+        Me.lblTimeToComplete.Text = "Estimated minutes required to complete task "
+        '
         'UpdateTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(278, 453)
+        Me.Controls.Add(Me.txtEstimateTime)
+        Me.Controls.Add(Me.lblTimeToComplete)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.grpType)
@@ -214,14 +215,12 @@ Partial Class UpdateTask
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.dtpAssigned)
         Me.Controls.Add(Me.dtpDue)
-        Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.cboUser)
-        Me.Controls.Add(Me.lblDescription)
         Me.Controls.Add(Me.lblDueDate)
         Me.Controls.Add(Me.lblAssigned)
         Me.Controls.Add(Me.lblOwner)
         Me.Name = "UpdateTask"
-        Me.Text = "UpdateTask"
+        Me.Text = "Update a Task"
         Me.grpType.ResumeLayout(False)
         Me.grpType.PerformLayout()
         Me.ResumeLayout(False)
@@ -232,9 +231,7 @@ Partial Class UpdateTask
     Friend WithEvents lblOwner As Label
     Friend WithEvents lblAssigned As Label
     Friend WithEvents lblDueDate As Label
-    Friend WithEvents lblDescription As Label
     Friend WithEvents cboUser As ComboBox
-    Friend WithEvents txtDescription As TextBox
     Friend WithEvents dtpDue As DateTimePicker
     Friend WithEvents dtpAssigned As DateTimePicker
     Friend WithEvents btnUpdate As Button
@@ -246,4 +243,6 @@ Partial Class UpdateTask
     Friend WithEvents radHomework As RadioButton
     Friend WithEvents lblTitle As Label
     Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtEstimateTime As TextBox
+    Friend WithEvents lblTimeToComplete As Label
 End Class

@@ -42,6 +42,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Final_Project_Grabner.TaskProjectDataSet.CompletedTasks_TDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Final_Project_Grabner.TaskProjectDataSet.Types_TRow">
 <summary>
 Represents strongly named DataRow class.
@@ -53,6 +58,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Final_Project_Grabner.TaskProjectDataSet._Tasks_T__Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Final_Project_Grabner.TaskProjectDataSet.CompletedTasks_TRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -72,6 +82,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Final_Project_Grabner.TaskProjectDataSet.CompletedTasks_TRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Final_Project_Grabner.TaskProjectDataSetTableAdapters.Types_TTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -83,6 +98,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Final_Project_Grabner.TaskProjectDataSetTableAdapters.CompletedTasks_TTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

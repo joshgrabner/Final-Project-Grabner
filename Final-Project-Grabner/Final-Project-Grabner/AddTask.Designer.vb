@@ -34,16 +34,16 @@ Partial Class AddTask
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.dtpAssigned = New System.Windows.Forms.DateTimePicker()
         Me.dtpDue = New System.Windows.Forms.DateTimePicker()
-        Me.txtDescription = New System.Windows.Forms.TextBox()
         Me.cboUser = New System.Windows.Forms.ComboBox()
         Me.TaskProjectDataSet = New Final_Project_Grabner.TaskProjectDataSet()
         Me.UserTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.lblDescription = New System.Windows.Forms.Label()
         Me.lblDueDate = New System.Windows.Forms.Label()
         Me.lblAssigned = New System.Windows.Forms.Label()
         Me.lblOwner = New System.Windows.Forms.Label()
         Me.User_TTableAdapter = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.User_TTableAdapter()
         Me.Tasks_T__TableAdapter1 = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
+        Me.lblTimeToComplete = New System.Windows.Forms.Label()
+        Me.txtEstimateTime = New System.Windows.Forms.TextBox()
         Me.grpType.SuspendLayout()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +52,7 @@ Partial Class AddTask
         'txtTitle
         '
         Me.txtTitle.Location = New System.Drawing.Point(122, 46)
+        Me.txtTitle.MaxLength = 20
         Me.txtTitle.Name = "txtTitle"
         Me.txtTitle.Size = New System.Drawing.Size(123, 20)
         Me.txtTitle.TabIndex = 25
@@ -125,7 +126,7 @@ Partial Class AddTask
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(167, 398)
+        Me.btnCancel.Location = New System.Drawing.Point(167, 314)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 22
@@ -134,7 +135,7 @@ Partial Class AddTask
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(45, 402)
+        Me.btnAdd.Location = New System.Drawing.Point(45, 318)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 21
@@ -157,15 +158,6 @@ Partial Class AddTask
         Me.dtpDue.Size = New System.Drawing.Size(103, 20)
         Me.dtpDue.TabIndex = 19
         '
-        'txtDescription
-        '
-        Me.txtDescription.Location = New System.Drawing.Point(45, 246)
-        Me.txtDescription.MaximumSize = New System.Drawing.Size(200, 150)
-        Me.txtDescription.MinimumSize = New System.Drawing.Size(200, 150)
-        Me.txtDescription.Name = "txtDescription"
-        Me.txtDescription.Size = New System.Drawing.Size(200, 150)
-        Me.txtDescription.TabIndex = 18
-        '
         'cboUser
         '
         Me.cboUser.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.TaskProjectDataSet, "User_T.UserID", True))
@@ -187,15 +179,6 @@ Partial Class AddTask
         '
         Me.UserTBindingSource.DataMember = "User_T"
         Me.UserTBindingSource.DataSource = Me.TaskProjectDataSet
-        '
-        'lblDescription
-        '
-        Me.lblDescription.AutoSize = True
-        Me.lblDescription.Location = New System.Drawing.Point(92, 230)
-        Me.lblDescription.Name = "lblDescription"
-        Me.lblDescription.Size = New System.Drawing.Size(99, 13)
-        Me.lblDescription.TabIndex = 16
-        Me.lblDescription.Text = "Description of Task"
         '
         'lblDueDate
         '
@@ -232,12 +215,31 @@ Partial Class AddTask
         '
         Me.Tasks_T__TableAdapter1.ClearBeforeFill = True
         '
+        'lblTimeToComplete
+        '
+        Me.lblTimeToComplete.AutoSize = True
+        Me.lblTimeToComplete.Location = New System.Drawing.Point(28, 247)
+        Me.lblTimeToComplete.Name = "lblTimeToComplete"
+        Me.lblTimeToComplete.Size = New System.Drawing.Size(217, 13)
+        Me.lblTimeToComplete.TabIndex = 26
+        Me.lblTimeToComplete.Text = "Estimated minutes required to complete task "
+        '
+        'txtEstimateTime
+        '
+        Me.txtEstimateTime.Location = New System.Drawing.Point(46, 272)
+        Me.txtEstimateTime.MaxLength = 3
+        Me.txtEstimateTime.Name = "txtEstimateTime"
+        Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
+        Me.txtEstimateTime.TabIndex = 27
+        '
         'AddTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(267, 433)
+        Me.ClientSize = New System.Drawing.Size(267, 363)
+        Me.Controls.Add(Me.txtEstimateTime)
+        Me.Controls.Add(Me.lblTimeToComplete)
         Me.Controls.Add(Me.txtTitle)
         Me.Controls.Add(Me.lblTitle)
         Me.Controls.Add(Me.grpType)
@@ -245,9 +247,7 @@ Partial Class AddTask
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.dtpAssigned)
         Me.Controls.Add(Me.dtpDue)
-        Me.Controls.Add(Me.txtDescription)
         Me.Controls.Add(Me.cboUser)
-        Me.Controls.Add(Me.lblDescription)
         Me.Controls.Add(Me.lblDueDate)
         Me.Controls.Add(Me.lblAssigned)
         Me.Controls.Add(Me.lblOwner)
@@ -273,9 +273,7 @@ Partial Class AddTask
     Friend WithEvents btnAdd As Button
     Friend WithEvents dtpAssigned As DateTimePicker
     Friend WithEvents dtpDue As DateTimePicker
-    Friend WithEvents txtDescription As TextBox
     Friend WithEvents cboUser As ComboBox
-    Friend WithEvents lblDescription As Label
     Friend WithEvents lblDueDate As Label
     Friend WithEvents lblAssigned As Label
     Friend WithEvents lblOwner As Label
@@ -283,4 +281,6 @@ Partial Class AddTask
     Friend WithEvents UserTBindingSource As BindingSource
     Friend WithEvents User_TTableAdapter As TaskProjectDataSetTableAdapters.User_TTableAdapter
     Friend WithEvents Tasks_T__TableAdapter1 As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
+    Friend WithEvents lblTimeToComplete As Label
+    Friend WithEvents txtEstimateTime As TextBox
 End Class
