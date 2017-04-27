@@ -44,9 +44,12 @@ Partial Class AddTask
         Me.Tasks_T__TableAdapter1 = New Final_Project_Grabner.TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter()
         Me.lblTimeToComplete = New System.Windows.Forms.Label()
         Me.txtEstimateTime = New System.Windows.Forms.TextBox()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.grpType.SuspendLayout()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtTitle
@@ -126,7 +129,7 @@ Partial Class AddTask
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(167, 314)
+        Me.btnCancel.Location = New System.Drawing.Point(174, 298)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 22
@@ -135,7 +138,7 @@ Partial Class AddTask
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(45, 318)
+        Me.btnAdd.Location = New System.Drawing.Point(31, 298)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 21
@@ -232,12 +235,27 @@ Partial Class AddTask
         Me.txtEstimateTime.Size = New System.Drawing.Size(196, 20)
         Me.txtEstimateTime.TabIndex = 27
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 341)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(267, 22)
+        Me.StatusStrip1.TabIndex = 28
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblStatus
+        '
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
+        '
         'AddTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(267, 363)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.txtEstimateTime)
         Me.Controls.Add(Me.lblTimeToComplete)
         Me.Controls.Add(Me.txtTitle)
@@ -257,6 +275,8 @@ Partial Class AddTask
         Me.grpType.PerformLayout()
         CType(Me.TaskProjectDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UserTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -283,4 +303,6 @@ Partial Class AddTask
     Friend WithEvents Tasks_T__TableAdapter1 As TaskProjectDataSetTableAdapters.Tasks_T__TableAdapter
     Friend WithEvents lblTimeToComplete As Label
     Friend WithEvents txtEstimateTime As TextBox
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents lblStatus As ToolStripStatusLabel
 End Class

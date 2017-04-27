@@ -3,7 +3,7 @@ Option Explicit On
 
 Public Class AddTask
     Private mTaskType As Short
-    Private mUserID As Short
+    Dim mUserID As Short
     Private mTime As Short
     Private mTask As New Task
 
@@ -44,7 +44,13 @@ Public Class AddTask
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         mTime = CShort(txtEstimateTime.Text)
-        mTask.Insert(False, mUserID, dtpDue.Value.Date, dtpAssigned.Value.Date, mTaskType, txtTitle.Text, mTime)
+
+        If mTask.Insert(False, mUserID, dtpDue.Value.Date, dtpAssigned.Value.Date,
+                        mTaskType, txtTitle.Text, mTime) Then
+            Me.Close()
+        Else
+            lblStatus.Text = "Cannot Add Task"
+        End If
     End Sub
 
     Private Sub cboUser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboUser.SelectedIndexChanged
